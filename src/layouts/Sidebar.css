@@ -1,0 +1,160 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--sidebar-width);
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--border-color);
+  overflow-y: auto;
+  z-index: 100;
+  padding-top: var(--header-height);
+}
+
+.sidebar-nav {
+  padding: 8px 0;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-collapse-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  color: var(--primary);
+  font-size: 13px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 4px;
+}
+
+.sidebar-collapse-btn:hover {
+  background: var(--primary-light);
+}
+
+.sidebar-item {
+  margin: 1px 0;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  color: var(--sidebar-text);
+  font-size: 13px;
+  font-weight: 400;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.15s;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-link:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.sidebar-link.active {
+  background: var(--sidebar-active);
+  color: white;
+  border-left-color: var(--primary-dark);
+  border-radius: 0 6px 6px 0;
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+.sidebar-link.has-submenu {
+  font-weight: 400;
+}
+
+.sidebar-link.has-submenu.open {
+  color: var(--primary);
+}
+
+.sidebar-icon {
+  display: flex;
+  align-items: center;
+  min-width: 20px;
+}
+
+.submenu-arrow {
+  margin-left: auto;
+  transition: transform 0.2s;
+}
+
+.submenu-arrow.rotated {
+  transform: rotate(180deg);
+}
+
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 12px;
+}
+
+.submenu-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  color: #666;
+  font-size: 12px;
+  transition: all 0.15s;
+  border-radius: 4px;
+  margin: 1px 8px 1px 0;
+}
+
+.submenu-link:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.submenu-link.active {
+  background: var(--sidebar-active);
+  color: white;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.subgroup {
+  margin: 2px 0;
+}
+
+.subgroup-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 7px 16px;
+  border: none;
+  background: none;
+  color: #555;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+}
+
+.subgroup-toggle:hover {
+  color: var(--primary);
+}
+
+.subgroup-toggle .rotated {
+  transform: rotate(180deg);
+}
+
+.subgroup-menu {
+  list-style: none;
+  padding: 0;
+  padding-left: 8px;
+}
